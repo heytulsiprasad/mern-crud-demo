@@ -4,10 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"backend": "node index.js",
 		"start-watch": "nodemon index.js",
 		"frontend": "cd client && npm start",
+		"start": "run-p backend frontend",
 		"dev": "run-p start-watch frontend"
+	},
+	"engines": {
+		"node": "12.18.0"
 	},
 	"keywords": [],
 	"author": "",
